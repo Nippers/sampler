@@ -1,0 +1,131 @@
+<html>
+  <head> <!-- Open tags with < > -->
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+  </head> <!-- Close tags with </ > -->
+  <body>
+    <h1>This is the first heading.</h1>
+    <h2>This is the second heading.</h2>
+    <h3>This third heading is in a san-serif font.</h3>
+    <div id="rightMenu">
+        This div has a fixed position<br>
+        and contains buttons with hover effects.<br>
+        Clicking on the buttons calls the messageBox function,<br>
+        which is in javascript<br><br>
+        <button onclick="messageBox('one')">Button 1</button><br><br><!--calls a JS function at the bottom of this file-->
+        <button onclick="messageBox('two')">Button 2</button><br><br>
+        <button onclick="messageBox('three')">Button 3</button><br><br>
+    </div>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Kids_%28baby_goats%29.JPG">
+    <br>
+    <hr>
+    <p>
+      This is a paragraph. It contains some <b>bold</b>, some <i>italic</i>, and some <u>underlined</u> text.<br>
+      Above this paragraph is a horizontal rule.<br>
+      <a href="http://www.cnn.com/videos/health/2017/09/15/goat-yoga-pkg.cnn">This is a link to a video about goat yoga.</a>
+      <br><br>
+      Now here's a list:
+    </p>
+    <li> List item 1
+    <li> List item 2
+    <li> List item 3<br><br>
+    <div id="blueBox">
+      This blue box is a div.<br>
+      You can use divs to divide sections of a webpage that you want to look different.<br>
+      The text in this div is centered.
+    </div>
+    <div id="orangeBox">
+      This orange div has a width of 600 pixels.<br>
+      The font is called VT323, and it comes from <a href="https://googlefonts.com">Google Fonts</a>.
+      <br>
+      A link to this font is inside the head tag at the beginning of the HTML file.
+    </div>
+    <div id="outsideGreenBox">
+      <div id="greenBox">
+        This green div is centered inside another div, which is yellow with a black border.<br>
+        To center a div, its display property must be <i>inline-block</i>.<br>
+        The text is white.
+      </div>
+    </div>
+    <div class="purpleBox">
+      There are three purple divs, and they all have the same styling.<br>
+      That's because "purpleBox" is a class, rather than an id.<br>
+      You can give multiple divs the same class if you want them to look the same.<br>
+      Here they are nested, but you could place them anywhere.
+      <div class="purpleBox">
+        This is the second purple div.
+        <div class="purpleBox">
+          This is the third purple div.
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- End HTML, begin CSS -->
+
+<style>
+  /* Everything inside the <style> tags is CSS. */
+  img{
+    width:400px;
+  }
+  h3{
+    font-family: sans-serif;
+  }
+  #rightMenu{
+    position:fixed;
+    right:20;
+    text-align: right;
+  }
+  button{
+    width:100px;
+    height:20px;
+    background-color: plum;
+  }
+  button:hover{
+    width:150px;
+    background-color: purple;
+    color:white;
+  }
+  #blueBox{
+    background-color: lightblue;
+    padding:15px;
+    text-align: center;
+  }
+  #orangeBox{
+    background-color: orange;
+    padding:30px;
+    width:600px;
+    font-family: 'VT323', monospace;
+    font-size: 25px;
+  }
+  #outsideGreenBox{
+    background-color: yellow;
+    border:3px solid black;
+    padding:15px;
+    text-align: center;
+  }
+  #greenBox{
+    background-color: forestgreen;
+    color: white;
+    display: inline-block;
+    width: 400px;
+    padding:15px;
+  }
+  .purpleBox{
+    background-color: purple;
+    color:white;
+    border: 5px solid red;
+    border-radius: 30px;
+    padding:20px;
+    width:600px;
+  }
+</style>
+
+<!--end CSS, begin JS-->
+
+<script>
+//everything inside the <script> tags is javascript.
+  function messageBox(num){
+    alert("You clicked on button number "+num+".");
+  }
+</script>
